@@ -1,7 +1,20 @@
 .kichwa{
-    color: white;
-    font-family: 'Poppins';
-    font-style: semi-bold;
+    color: #fa9b9c;
+   
+
+    
     font-weight: 600;
+    font-style: italic;
+    font-size: 20px;
+
+
+    
   
+  
+}
+
+.kichwa:hover{
+    color:
+    #44b7ab;
+    text-decoration: underline;
 }

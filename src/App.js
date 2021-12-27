@@ -1,3 +1,5 @@
+import React from 'react';
+import { Component } from 'react';
 import logo from './logo.svg';
 import './App.css';
 import Container from 'react-bootstrap/Container';
@@ -5,17 +7,35 @@ import Row from 'react-bootstrap/Row'
 import Header from './Header';
 import Col from 'react-bootstrap/Col'
 import Image from 'react-bootstrap/Image'
+import BIRDS from 'vanta/dist/vanta.birds.min'
 
-function App() {
+class App extends React.Component{
+  constructor(props) {
+    super(props);
+    this.vantaRef = React.createRef();
+  }
+
+  componentDidMount() {
+    this.vantaEffect = BIRDS({
+      el: this.vantaRef.current
+    })
+  }
+  componentWillUnmount() {
+    if (this.vantaEffect) this.vantaEffect.destroy()
+  }
+render() {
   return (
     <Container fluid="lg">
-    <Row>
-    <Col sm={true}><Image src={logo} className="App-logo" /> </Col>
-    <Col sm={true}><Header/></Col>
-    <Col sm={true}><img   /> </Col>
+    <Row class="header" ref={this.vantaRef}>
+    <Col sm={2}><Image src={logo} className="App-logo" /> </Col>
+    <Col sm={10}><Header/></Col>
+    
     </Row>
   </Container>
-  );
+
+  
+  )
+}
 }
 
 export default App;
