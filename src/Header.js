@@ -19,7 +19,7 @@ class Header extends React.Component{
         return(
            
             <Nav className="me-auto justify-content-end">
-              <Nav.Link className="kichwa"  href="#home">Home</Nav.Link>
+              <Nav.Link className="kichwa nav-pill"  href="#home">Home</Nav.Link>
               <Nav.Link className="kichwa" href="#features">Work</Nav.Link>
               <Nav.Link className="kichwa" href="#pricing">About</Nav.Link>
               <Nav.Link className="kichwa" href="#pricing">Contact</Nav.Link>

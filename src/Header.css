@@ -1,11 +1,12 @@
 .kichwa{
-    color: white;
+    color: #72ede4;
    
-
+    font-family: Orbitron;
     
-    font-weight: 600;
-    font-style: italic;
-    font-size: 20px;
+    font-weight: 900;
+    font-size: 15px;
+    text-align: center;
+
 
 
     
@@ -15,6 +16,6 @@
 
 .kichwa:hover{
     color:
-    #44b7ab;
+    white;
     text-decoration: underline;
 }

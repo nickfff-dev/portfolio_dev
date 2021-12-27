@@ -16,19 +16,12 @@ class App extends React.Component{
     this.vantaRef = React.createRef();
   }
 
-  componentDidMount() {
-    this.vantaEffect = BIRDS({
-      el: this.vantaRef.current
-    })
-  }
-  componentWillUnmount() {
-    if (this.vantaEffect) this.vantaEffect.destroy()
-  }
+  
 render() {
   return (
     <div>
     <Container fluid="lg">
-    <Row className="header" ref={this.vantaRef}>
+    <Row className="header">
     <Col sm={2}><Image src={logo} className="App-logo" /> </Col>
     <Col sm={10}><Header/></Col>
     
